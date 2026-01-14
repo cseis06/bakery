@@ -133,9 +133,9 @@ const Catalog: React.FC = () => {
     >
       <div className="max-w-7xl mx-auto px-6 md:px-8">
         {/* Section Header */}
-        <div ref={headerRef} className="text-center mb-16 md:mb-20">
+        <div ref={headerRef} className="text-center mb-16 md:mb-20 flex flex-col gap-4">
           <span 
-            className="inline-block text-xs font-semibold tracking-[0.3em] uppercase mb-4 text-red-950/50"
+            className="inline-block text-xs font-semibold tracking-[0.3em] uppercase text-red-950/50"
           >
             Nuestras Creaciones
           </span>

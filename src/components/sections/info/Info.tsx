@@ -56,7 +56,7 @@ const Info: React.FC = () => {
   const sectionRef = useRef<HTMLElement>(null)
   const headerRef = useRef<HTMLDivElement>(null)
   const quoteRef = useRef<HTMLDivElement>(null)
-  const cardsRef = useRef<(HTMLDivElement | null)[]>([])
+  const cardsRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -98,27 +98,26 @@ const Info: React.FC = () => {
       )
 
       // Cards stagger animation
-      cardsRef.current.forEach((card, index) => {
-        if (card) {
-          gsap.fromTo(
-            card,
-            { y: 80, opacity: 0, filter: 'blur(10px)' },
-            {
-              y: 0,
-              opacity: 1,
-              filter: 'blur(0px)',
-              duration: 0.7,
-              delay: index * 0.2,
-              ease: 'power2.out',
-              scrollTrigger: {
-                trigger: card,
-                start: 'top 90%',
-                toggleActions: 'play reverse play reverse'
-              }
+      const cards = cardsRef.current?.children
+      if (cards) {
+        gsap.fromTo(
+          cards,
+          { y: 60, opacity: 0, filter: 'blur(10px)' },
+          {
+            y: 0,
+            opacity: 1,
+            filter: 'blur(0px)',
+            duration: 0.7,
+            stagger: 0.15,
+            ease: 'power2.out',
+            scrollTrigger: {
+              trigger: cardsRef.current,
+              start: 'top 85%',
+              toggleActions: 'play reverse play reverse'
             }
-          )
-        }
-      })
+          }
+        )
+      }
     }, sectionRef)
 
     return () => ctx.revert()
@@ -131,22 +130,16 @@ const Info: React.FC = () => {
     >
       <div className="max-w-7xl mx-auto px-6 md:px-8">
         {/* Header Row */}
-        <div className="flex flex-col lg:flex-row lg:justify-between lg:items-start gap-8 mb-16 md:mb-24">
+        <div className="flex flex-col lg:flex-row lg:justify-between lg:items-start gap-8 mb-16 md:mb-20">
           {/* Left - Title */}
           <div ref={headerRef} className="lg:max-w-md">
-            <span
-              className="inline-block text-xs font-semibold tracking-[0.3em] uppercase mb-4"
-              style={{ color: '#c75d3a' }}
-            >
+            <span className="inline-block text-xs font-semibold tracking-[0.3em] uppercase mb-4 text-red-900">
               Manifiesto
             </span>
-            <h2
-              className="text-4xl md:text-5xl lg:text-6xl font-serif leading-tight"
-              style={{ color: '#3d2b1f' }}
-            >
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif leading-tight text-red-950/50">
               Tres Soles,
               <br />
-              Un <span className="italic" style={{ color: '#c75d3a' }}>Alma</span>.
+              Un <span className="italic text-red-900">Alma</span>.
             </h2>
           </div>
 
@@ -155,60 +148,42 @@ const Info: React.FC = () => {
             ref={quoteRef}
             className="lg:max-w-sm lg:text-right lg:pt-8"
           >
-            <p
-              className="text-sm md:text-base italic leading-relaxed"
-              style={{ color: '#6b5a4a' }}
-            >
+            <p className="text-sm md:text-base italic leading-relaxed text-red-950/50">
               "El tiempo es nuestro ingrediente secreto.
               No solo horneamos pan, cultivamos un legado vivo."
             </p>
           </div>
         </div>
 
-        {/* Pillars Cards - Staggered Layout */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 relative">
-          {pillars.map((pillar, index) => (
+        {/* Pillars Cards - Aligned Layout */}
+        <div 
+          ref={cardsRef}
+          className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8"
+        >
+          {pillars.map((pillar) => (
             <div
               key={pillar.number}
-              ref={(el) => { cardsRef.current[index] = el }}
               className="flex flex-col"
-              style={{
-                marginTop: index === 0 ? '0' : index === 1 ? '2rem' : '4rem'
-              }}
             >
               {/* Card */}
-              <div
-                className="bg-white rounded-3xl p-8 md:p-10 shadow-sm hover:shadow-md transition-shadow duration-300 flex-grow"
-              >
+              <div className="bg-white rounded-3xl p-8 md:p-10 shadow-sm hover:shadow-md transition-shadow duration-300 flex-grow">
                 {/* Number */}
-                <span
-                  className="text-5xl md:text-6xl font-serif italic opacity-20 block mb-6"
-                  style={{ color: '#c75d3a' }}
-                >
+                <span className="text-5xl md:text-6xl font-serif italic block mb-6 text-red-900/20">
                   {pillar.number}
                 </span>
 
                 {/* Icon */}
-                <div
-                  className="w-16 h-16 rounded-2xl flex items-center justify-center mb-6"
-                  style={{ backgroundColor: '#fef9f5', color: '#c75d3a' }}
-                >
+                <div className="w-16 h-16 rounded-2xl flex items-center justify-center bg-red-50 text-red-900">
                   {pillar.icon}
                 </div>
               </div>
 
               {/* Text Content - Outside Card */}
               <div className="pt-6 px-2">
-                <h3
-                  className="text-sm font-bold tracking-[0.15em] uppercase mb-3"
-                  style={{ color: '#c75d3a' }}
-                >
+                <h3 className="text-sm font-bold tracking-[0.15em] uppercase mb-3 text-red-900">
                   {pillar.title}
                 </h3>
-                <p
-                  className="text-sm leading-relaxed"
-                  style={{ color: '#6b5a4a' }}
-                >
+                <p className="text-sm leading-relaxed text-red-950/50">
                   {pillar.description}
                 </p>
               </div>

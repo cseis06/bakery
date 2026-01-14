@@ -11,11 +11,11 @@ const BestSeller = () => {
 
   return (
     <section className='h-[90dvh] flex flex-col justify-center items-center gap-26 text-center'>
-        <ScrollReveal direction="none" scale={0.5} duration={0.6} blur={20}>
-          <h3 className='text-6xl font-extrabold text-red-900 text-center italic'>Lo Más Solicitado</h3>
-          <span className='text-xl font-light text-red-900 text-center uppercase'>
-            Estos son los sabores que nuestros aliados eligen con más frecuencia...
+        <ScrollReveal direction="none" scale={0.5} duration={0.6} blur={20} className='flex flex-col gap-4'>
+          <span className='inline-block text-xs font-semibold tracking-[0.3em] uppercase text-red-950/50'>
+            Estos son los sabores que nuestros aliados eligen con más frecuencia;
           </span>
+          <h3 className='text-3xl md:text-4xl lg:text-6xl font-serif font-extrabold italic mb-6 text-red-900'>Lo Más Solicitado</h3>
         </ScrollReveal>
         <div className='flex justify-center items-center gap-8'>
           <ScrollReveal direction="none" scale={0.5} duration={0.6} delay={0.4} blur={20} >
