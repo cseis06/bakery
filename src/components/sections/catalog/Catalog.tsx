@@ -2,6 +2,8 @@ import React, { useRef, useEffect } from 'react'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import CatalogProduct from '../../common/CatalogProduct'
+import Panettone from "../../../assets/img/panettone.jpg"
+
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -33,7 +35,7 @@ const featuredProducts: Product[] = [
     category: 'Especialidades',
     name: 'Panettone Milanese',
     description: 'El rey de los panes dulces italianos. Elaborado con masa madre, frutas confitadas premium y un proceso de fermentación de 72 horas.',
-    image: 'https://images.unsplash.com/photo-1609508280149-48e0a36e5dea?w=800&q=80'
+    image: Panettone
   },
   {
     id: 4,
