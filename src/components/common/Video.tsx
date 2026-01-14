@@ -1,4 +1,4 @@
-import VideoBakery from "../assets/video/bakery-video.mp4";
+import VideoBakery from "../../assets/video/bakery-video.mp4";
 
 const VideoBackground = () => {
   return (

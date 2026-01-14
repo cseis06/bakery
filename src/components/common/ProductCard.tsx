@@ -65,7 +65,7 @@ const ProductCard: React.FC<ProductCardProps> = ({
           </div>
         </div>
         <button className='relative top-5' onClick={onButtonClick}>
-          <div className='flex justify-center cursor-pointer w-[100px] rounded-full bg-linear-to-r from-red-950 via-orange-900 to-amber-700 py-3 px-4'>
+          <div className='flex justify-center cursor-pointer w-[100px] rounded-full bg-linear-to-r from-red-950 to-amber-700 py-3 px-4'>
             <span className='text-center text-xs font-semibold text-white'>{buttonText}</span>
           </div>
         </button>
