@@ -191,8 +191,7 @@ const Catalog: React.FC = () => {
 
           {/* Additional info */}
           <p 
-            className="mt-4 text-sm"
-            style={{ color: '#8b7355' }}
+            className="mt-4 text-sm text-red-950/50"
           >
             Más de 50 productos disponibles para tu evento o negocio
           </p>

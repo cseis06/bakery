@@ -1,8 +1,7 @@
-import React from 'react';
 import ScrollReveal from '../../components/animation/ScrollReveal';
 import Hero from '../../components/sections/hero/Hero';
 import VideoBackground from '../../components/common/Video';
-import Contact from '../../components/sections/contact/Contact';
+//import Contact from '../../components/sections/contact/Contact';
 import BestSeller from '../../components/sections/bestSeller/BestSeller';
 import Info from '../../components/sections/info/Info';
 import Testimonials from '../../components/sections/testimonials/Testimonials';
@@ -16,18 +15,19 @@ const Home = () => {
       <BestSeller />
       <section className='h-[96dvh] flex flex-col justify-center items-center text-center gap-14'>
         <ScrollReveal direction="none" scale={0.5} duration={0.6} blur={20}>
+          
+          <span className='inline-block text-xs font-semibold tracking-[0.3em] uppercase mb-4 text-red-950/50'>Una producción confiable, para lograr un sabor inigualable;</span>
           <h3 className='text-6xl font-extrabold text-red-900 text-center italic'>
             La técnica detrás del sabor
           </h3>
-          <span className='text-xl font-light text-red-900 text-center uppercase'>Una producción confiable, para lograr un sabor inigualable;</span>
         </ScrollReveal>
         <VideoBackground />
       </section>
       <Catalog />
-      {/*<Contact />
-      <Info />*/}
+      {/*<Contact />*/}
+      
       <Testimonials />
-
+      <Info />
     </div>
   )
 }

@@ -38,8 +38,7 @@ const CatalogProduct: React.FC<CatalogProductProps> = ({
       <div className="flex flex-col flex-grow">
         {/* Category */}
         <span 
-          className="text-xs font-semibold tracking-[0.2em] uppercase mb-2"
-          style={{ color: '#c75d3a' }}
+          className="text-xs font-semibold tracking-[0.2em] uppercase mb-2 text-red-900"
         >
           {category}
         </span>
@@ -47,15 +46,13 @@ const CatalogProduct: React.FC<CatalogProductProps> = ({
         {/* Product Name */}
         <h3 
           className="text-xl md:text-2xl font-serif font-medium mb-3"
-          style={{ color: '#3d2b1f' }}
         >
           {name}
         </h3>
 
         {/* Description - 2 lines max with ellipsis */}
         <p 
-          className="text-sm md:text-base leading-relaxed mb-5 line-clamp-2"
-          style={{ color: '#6b5a4a' }}
+          className="text-sm md:text-base leading-relaxed mb-5 line-clamp-2 text-red-950/60"
         >
           {description}
         </p>
@@ -67,8 +64,7 @@ const CatalogProduct: React.FC<CatalogProductProps> = ({
         <button
           onClick={onRequestQuote}
           className="inline-flex items-center gap-2 text-sm font-medium tracking-wide 
-                     transition-all duration-300 group/btn"
-          style={{ color: '#8b7355' }}
+                     transition-all duration-300 group/btn text-red-950/60"
         >
           <span className="relative">
             Solicitar Cotización

@@ -1,4 +1,3 @@
-import React from 'react';
 import ScrollReveal from '../../animation/ScrollReveal';
 import ProductCard from '../../common/ProductCard';
 import PanettoneNoBg from "../../../assets/img/products/panettone-nobg.png"

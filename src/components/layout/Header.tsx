@@ -1,6 +1,5 @@
 import { faPhone } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import React from 'react'
 
 const Header = () => {
 
@@ -25,7 +24,7 @@ const Header = () => {
 
   return (
     <header //ref={moveElement} 
-	className='sticky top-0 z-10 bg-amber-50 w-full py-4 px-24 shadow-md shadow-amber-950/10'>
+	className='sticky top-0 z-50 bg-amber-50 w-full py-4 px-24 shadow-md shadow-amber-950/10'>
 			<div className='flex justify-between items-center'>
 				<div>
 					<h1 className='text-1xl'>Logo</h1>
