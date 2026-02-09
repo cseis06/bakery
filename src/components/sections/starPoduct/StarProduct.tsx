@@ -249,20 +249,6 @@ const StarProduct: React.FC<PanettoneInfoProps> = ({
               <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
             </svg>
           </button>
-
-          <button className="inline-flex items-center gap-2 text-red-900 font-medium tracking-wide hover:text-red-950 transition-colors group">
-            <span>Consultar Ficha Técnica</span>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="w-4 h-4 transition-transform duration-300 group-hover:translate-y-1"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-              strokeWidth={2}
-            >
-              <path strokeLinecap="round" strokeLinejoin="round" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
-            </svg>
-          </button>
         </div>
 
         {/* Bottom info line */}

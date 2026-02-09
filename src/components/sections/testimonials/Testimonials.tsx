@@ -159,7 +159,7 @@ const Testimonials: React.FC = () => {
           <button
             onClick={handlePrev}
             disabled={isAnimating}
-            className="w-12 h-12 rounded-full border-2 flex items-center justify-center transition-all duration-300 hover:scale-110 hover:bg-white/20 disabled:opacity-50 disabled:cursor-not-allowed border-red-950/20 text-red-950/20"
+            className="w-12 h-12 rounded-full border-2 flex items-center justify-center transition-all duration-300 hover:text-white/50 hover:bg-red-950 disabled:opacity-50 disabled:cursor-not-allowed border-red-950/20 text-red-950/20"
             aria-label="Previous testimonial"
           >
             <FontAwesomeIcon icon={faChevronLeft} />
@@ -171,7 +171,7 @@ const Testimonials: React.FC = () => {
                 key={index}
                 className={`w-2 h-2 rounded-full transition-all duration-300 ${
                   index === currentIndex 
-                    ? 'w-6 bg-red-900' 
+                    ? 'w-6 bg-red-950' 
                     : 'bg-red-950/20'
                 }`}
               />
@@ -181,7 +181,7 @@ const Testimonials: React.FC = () => {
           <button
             onClick={handleNext}
             disabled={isAnimating}
-            className="w-12 h-12 rounded-full border-2 flex items-center justify-center transition-all duration-300 hover:scale-110 hover:bg-white/20 disabled:opacity-50 disabled:cursor-not-allowed border-red-950/20 text-red-950/20"
+            className="w-12 h-12 rounded-full border-2 flex items-center justify-center transition-all duration-300 hover:text-white/50 hover:bg-red-950 disabled:opacity-50 disabled:cursor-not-allowed border-red-950/20 text-red-950/20"
             aria-label="Next testimonial"
           >
             <FontAwesomeIcon icon={faChevronRight} />

@@ -142,7 +142,7 @@ const Catalog: React.FC = () => {
             Nuestras Creaciones
           </span>
           <h2 
-            className="text-3xl md:text-4xl lg:text-6xl font-serif font-extrabold italic mb-6 text-red-900"
+            className="text-3xl md:text-4xl lg:text-6xl font-serif italic mb-6 text-red-900"
           >
             Catálogo de Productos
           </h2>
@@ -174,9 +174,9 @@ const Catalog: React.FC = () => {
         <div ref={ctaRef} className="text-center">
           <button
             onClick={handleViewAllProducts}
-            className="inline-flex items-center gap-3 px-8 py-4 rounded-full bg-red-950 text-amber-50
+            className="inline-flex items-center gap-3 px-8 py-4 rounded-full bg-red-900 text-amber-50
                        font-medium tracking-wide transition-all duration-300
-                       hover:scale-105 hover:shadow-lg group"
+                       hover:bg-red-950 group"
           >
             <span>Ver Catálogo Completo</span>
             <svg 
