@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import Logo from '../../assets/img/logo-text.png'
+import { Link, useLocation } from 'react-router-dom'
 
 interface HeaderProps {
   logo?: string
@@ -10,6 +11,7 @@ const Header: React.FC<HeaderProps> = ({
 }) => {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+  const location = useLocation()
 
   useEffect(() => {
     const handleScroll = () => {
@@ -30,14 +32,17 @@ const Header: React.FC<HeaderProps> = ({
   }, [isMobileMenuOpen])
 
   const navItems = [
-    { label: 'Inicio', href: '#inicio' },
-    { label: 'Proceso', href: '#proceso' },
-    { label: 'Catálogo', href: '#catalogo' },
-    { label: 'Producto Estrella', href: '#panettone' },
+    { label: 'Inicio', path: '/#inicio' },
+    { label: 'FAQ', path: '#faq' },
+    { label: 'Catálogo', path: 'catalogo' },
   ]
 
   const handleNavClick = () => {
     setIsMobileMenuOpen(false)
+  }
+
+  const isActive = (path: string) => {
+    return location.pathname === path
   }
 
   return (
@@ -53,7 +58,7 @@ const Header: React.FC<HeaderProps> = ({
           <div className="flex justify-between items-center h-16 md:h-20">
             
             {/* Logo */}
-            <a href="#">
+            <Link to="/">
               <div className="max-w-[150px] p-5">
                 <img
                   src={logo}
@@ -61,20 +66,28 @@ const Header: React.FC<HeaderProps> = ({
                   className="w-full h-full object-cover"
                 />
               </div>
-            </a>
+            </Link>
 
             {/* Navigation Desktop */}
             <nav className="hidden lg:block">
               <ul className="flex items-center gap-8">
                 {navItems.map((item) => (
                   <li key={item.label}>
-                    <a
-                      href={item.href}
-                      className="text-sm text-red-950/60 hover:text-red-900 transition-colors duration-300 relative group"
+                    <Link
+                      to={item.path}
+                      className={`text-sm transition-colors duration-300 relative group ${
+                        isActive(item.path)
+                          ? 'text-red-900 font-semibold'
+                          : 'text-red-950/60 hover:text-red-900'
+                      }`}
                     >
                       {item.label}
-                      <span className="absolute -bottom-1 left-0 w-0 h-[2px] bg-red-900 transition-all duration-300 group-hover:w-full"></span>
-                    </a>
+                      <span 
+                        className={`absolute -bottom-1 left-0 h-[2px] bg-red-900 transition-all duration-300 ${
+                          isActive(item.path) ? 'w-full' : 'w-0 group-hover:w-full'
+                        }`}
+                      ></span>
+                    </Link>
                   </li>
                 ))}
               </ul>
@@ -82,8 +95,8 @@ const Header: React.FC<HeaderProps> = ({
 
             {/* CTA & Mobile Menu */}
             <div className="flex items-center gap-4">
-              <a
-                href="#contacto"
+              <Link
+                to="/contacto"
                 className="hidden md:inline-flex items-center justify-center gap-2 bg-red-900 text-white px-5 py-2.5 rounded-full text-sm font-medium tracking-wide hover:bg-red-950 transition-all duration-300 group"
               >
                 <svg
@@ -101,7 +114,7 @@ const Header: React.FC<HeaderProps> = ({
                   />
                 </svg>
                 <span>Contacto</span>
-              </a>
+              </Link>
 
               {/* Mobile Menu Button */}
               <button
@@ -173,13 +186,17 @@ const Header: React.FC<HeaderProps> = ({
                     transition: `all 0.3s ease-out ${index * 0.1}s`
                   }}
                 >
-                  <a
-                    href={item.href}
+                  <Link
+                    to={item.path}
                     onClick={handleNavClick}
-                    className="block px-4 py-3 text-lg text-red-950/80 hover:text-red-900 hover:bg-red-900/5 rounded-lg transition-all duration-300"
+                    className={`block px-4 py-3 text-lg rounded-lg transition-all duration-300 ${
+                      isActive(item.path)
+                        ? 'text-red-900 bg-red-900/10 font-semibold'
+                        : 'text-red-950/80 hover:text-red-900 hover:bg-red-900/5'
+                    }`}
                   >
                     {item.label}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -193,8 +210,8 @@ const Header: React.FC<HeaderProps> = ({
               transition: 'all 0.3s ease-out 0.4s'
             }}
           >
-            <a
-              href="#contacto"
+            <Link
+              to="/contacto"
               onClick={handleNavClick}
               className="flex items-center justify-center gap-2 bg-red-900 text-white px-6 py-3.5 rounded-full text-base font-medium tracking-wide hover:bg-red-950 transition-all duration-300 w-full"
             >
@@ -213,7 +230,7 @@ const Header: React.FC<HeaderProps> = ({
                 />
               </svg>
               <span>Contactar</span>
-            </a>
+            </Link>
 
             {/* Social Links Mobile */}
             <div className="mt-8 pt-6 border-t border-red-900/10">

@@ -62,10 +62,10 @@ const Contact: React.FC = () => {
         const L = (window as any).L
 
         // Madrid coordinates (example location)
-        const lat = 40.4168
-        const lng = -3.7038
+        const lat = -25.483510
+        const lng = -54.659262
 
-        const map = L.map(mapContainerRef.current).setView([lat, lng], 13)
+        const map = L.map(mapContainerRef.current).setView([lat, lng], 20)
 
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
           attribution: '© OpenStreetMap contributors'
@@ -101,7 +101,7 @@ const Contact: React.FC = () => {
 
         L.marker([lat, lng], { icon: customIcon })
           .addTo(map)
-          .bindPopup('<strong>Panadería Artesanal</strong><br>Madrid, España')
+          .bindPopup('<strong>Lunardi</strong><br>Ciudad del Este, Paraguays')
       }
     }
     document.head.appendChild(scriptElement)
@@ -218,9 +218,9 @@ const Contact: React.FC = () => {
                   Establecimiento de Convenios
                 </span>
                 <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif leading-tight text-red-950 mb-6">
-                  Elevate Your
+                  Contáctanos y
                   <br />
-                  <span className="text-red-900">Offering.</span>
+                  <span className="text-red-900">Trabajemos Juntos.</span>
                 </h2>
                 <p className="text-base text-red-950/50 leading-relaxed mb-10 max-w-md">
                   Suministrando productos premium, de fermentación larga, a hoteles de lujo, boutiques, cafés y mercados gourmet alrededor del mundo.
@@ -271,21 +271,21 @@ const Contact: React.FC = () => {
               className="bg-white rounded-3xl p-8 md:p-10 shadow-sm"
             >
               <h3 className="text-xl md:text-2xl font-serif text-red-950 mb-8">
-                Inquire for Partnership
+                Envíanos un correo
               </h3>
 
               <form onSubmit={handleSubmit} className="space-y-6">
                 {/* Company Name */}
                 <div>
                   <label className="block text-xs font-semibold tracking-wider uppercase text-red-950/70 mb-2">
-                    Company Name
+                    Nombre de la empresa
                   </label>
                   <input
                     type="text"
                     name="companyName"
                     value={formData.companyName}
                     onChange={handleInputChange}
-                    placeholder="Enter your business name"
+                    placeholder="Ingrese el nombre de su empresas"
                     className="w-full px-4 py-3 border border-red-200 rounded-xl text-red-950 placeholder:text-red-950/30 focus:outline-none focus:border-red-900 transition-colors"
                   />
                 </div>
@@ -293,7 +293,7 @@ const Contact: React.FC = () => {
                 {/* Business Type */}
                 <div>
                   <label className="block text-xs font-semibold tracking-wider uppercase text-red-950/70 mb-2">
-                    Business Type
+                    Tipo de negocio
                   </label>
                   <select
                     name="businessType"
@@ -318,7 +318,7 @@ const Contact: React.FC = () => {
                 {/* Monthly Volume */}
                 <div>
                   <label className="block text-xs font-semibold tracking-wider uppercase text-red-950/70 mb-2">
-                    Monthly Volume
+                    Volumen mensual
                   </label>
                   <select
                     name="monthlyVolume"
@@ -343,13 +343,13 @@ const Contact: React.FC = () => {
                 {/* Additional Notes */}
                 <div>
                   <label className="block text-xs font-semibold tracking-wider uppercase text-red-950/70 mb-2">
-                    Additional Notes
+                    Notas adicionales
                   </label>
                   <textarea
                     name="additionalNotes"
                     value={formData.additionalNotes}
                     onChange={handleInputChange}
-                    placeholder="Logistics requirements or specific sourcing interests..."
+                    placeholder="Requerimientos logísticos o intereses específicos."
                     rows={4}
                     className="w-full px-4 py-3 border border-red-200 rounded-xl text-red-950 placeholder:text-red-950/30 focus:outline-none focus:border-red-900 transition-colors resize-none"
                   />
@@ -360,7 +360,7 @@ const Contact: React.FC = () => {
                   type="submit"
                   className="w-full bg-red-900 text-white py-4 rounded-xl font-medium tracking-wide flex items-center justify-center gap-2 hover:bg-red-950 transition-colors group"
                 >
-                  <span>Request Catalog & Pricing</span>
+                  <span>Solicitar Catálogo y Precios</span>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1"
@@ -389,9 +389,7 @@ const Contact: React.FC = () => {
                   Nuestra Ubicación
                 </h3>
                 <p className="text-sm text-red-200/70 max-w-lg leading-relaxed">
-                  Ofelia San Martín es un hub centralizado donde nuestras instalaciones operan en el 
-                  polígono industrial. Nuestro equipo de logística coordina entregas sin demora, 
-                  desde el horno hasta la puerta de nuestros socios.
+                  Nos encontramos en Ciudad del Este, Paraguay, en una ubicación estratégica que nos permite optimizar la producción y la logística de distribución a gran escala. Nuestras instalaciones funcionan exclusivamente como fábrica y centro de producción, diseñadas para abastecer de manera eficiente a nuestros clientes mayoristas.
                 </p>
               </div>
 
@@ -401,20 +399,18 @@ const Contact: React.FC = () => {
                   <div className="w-3 h-3 rounded-full bg-red-900" />
                   <span className="text-sm text-red-200/70">Logistics Center</span>
                 </div>
-                <div className="flex items-center gap-2">
-                  <div className="w-3 h-3 rounded-full bg-amber-100" />
-                  <span className="text-sm text-red-200/70">Artisan Bakery</span>
-                </div>
               </div>
             </div>
 
             {/* Map Container */}
             <div className="rounded-2xl overflow-hidden shadow-2xl">
-              <div
-                ref={mapContainerRef}
-                className="w-full h-[400px] md:h-[500px]"
-                style={{ backgroundColor: '#e5e3df' }}
-              />
+              <a href="https://www.google.com/maps/place/25%C2%B029'00.6%22S+54%C2%B039'33.3%22W/@-25.4835177,-54.6592508,51m/data=!3m1!1e3!4m4!3m3!8m2!3d-25.4835!4d-54.65925?entry=ttu&g_ep=EgoyMDI2MDIwNC4wIKXMDSoKLDEwMDc5MjA3M0gBUAM%3D" target='_blank'>
+                <div
+                  ref={mapContainerRef}
+                  className="w-full h-[400px] md:h-[500px]"
+                  style={{ backgroundColor: '#e5e3df' }}
+                />
+              </a>
             </div>
           </div>
         </div>

@@ -143,7 +143,7 @@ const Hero: React.FC<HeroProps> = ({
           <div className="lg:col-span-6 xl:col-span-5">
             {/* Label */}
             <span className="inline-block text-[10px] md:text-xs font-semibold tracking-[0.3em] uppercase mb-3 md:mb-4 text-red-950/50">
-              Atelier Panettone
+              Panadería Lunardi
             </span>
 
             {/* Title */}

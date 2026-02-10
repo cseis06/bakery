@@ -64,12 +64,12 @@ const CatalogProduct: React.FC<CatalogProductProps> = ({
         <button
           onClick={onRequestQuote}
           className="inline-flex items-center gap-2 text-sm font-medium tracking-wide 
-                     transition-all duration-300 group/btn text-red-950/60"
+                     transition-all duration-300 group/btn text-red-950/75 hover:text-red-900"
         >
           <span className="relative">
             Solicitar Cotización
             <span 
-              className="absolute bottom-0 left-0 w-0 h-[1px] bg-[#c75d3a] 
+              className="absolute -bottom-1 left-0 h-[2px] w-0 bg-red-900 rounded-xl
                          transition-all duration-300 group-hover/btn:w-full"
             />
           </span>

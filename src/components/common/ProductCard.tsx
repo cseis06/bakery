@@ -56,7 +56,7 @@ const ProductCard: React.FC<ProductCardProps> = ({
 
           <div className='w-full flex justify-between justify-self-end items-center'>
             {badgeText && (
-              <span className='text-xs text-red-900/90'>{badgeText}</span>
+              <span className='text-xs uppercase text-red-900/90'>{badgeText}</span>
             )}
 
             <div className='text-amber-600/65'>

@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import Logo from '../../assets/img/logo-text.png'
 
 interface FooterProps {
@@ -23,16 +24,16 @@ const Footer: React.FC<FooterProps> = ({
           
           {/* Logo & Description - Col 1 */}
           <div className="lg:col-span-4">
-            <a href="#" className="flex items-center gap-3 mb-6 group">
+            <Link to="/" className="flex items-center gap-3 mb-6 group">
               {/* Logo */}
-                <div className="max-w-[350px]">
-                  <img
-                    src={logo}
-                    alt="Lunardi"
-                    className="w-full h-full object-cover aspect-7/3"
-                  />
-                </div>
-            </a>
+              <div className="max-w-[350px]">
+                <img
+                  src={logo}
+                  alt="Lunardi"
+                  className="w-full h-full object-cover aspect-7/3"
+                />
+              </div>
+            </Link>
             
             <p className="text-sm text-red-200/60 leading-relaxed mb-6 max-w-sm">
               Obrador exclusivo de alta repostería artesanal para hostelería de lujo y tiendas gourmet. 
@@ -82,20 +83,18 @@ const Footer: React.FC<FooterProps> = ({
             </h3>
             <ul className="space-y-3">
               {[
-                { label: 'Inicio', href: '#inicio' },
-                { label: 'Sobre Nosotros', href: '#sobre-nosotros' },
-                { label: 'Productos', href: '#productos' },
-                { label: 'Proceso', href: '#proceso' },
-                { label: 'Contacto', href: '#contacto' }
+                { label: 'Inicio', path: '/' },
+                { label: 'Catálogo', path: '/catalogo' },
+                { label: 'Contacto', path: '/contacto' }
               ].map((item) => (
                 <li key={item.label}>
-                  <a
-                    href={item.href}
+                  <Link
+                    to={item.path}
                     className="text-sm text-red-200/60 hover:text-white transition-colors duration-300 inline-flex items-center gap-2 group"
                   >
                     <span className="w-0 group-hover:w-3 h-px bg-red-900 transition-all duration-300" />
                     {item.label}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -225,7 +224,7 @@ const Footer: React.FC<FooterProps> = ({
         <div className="max-w-7xl mx-auto px-6 md:px-8 py-6">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-xs text-red-200/40 text-center md:text-left">
-              © {currentYear} Atelier Panettone. Todos los derechos reservados.
+              © {currentYear} Lunardi S.A. Todos los derechos reservados.
             </p>
             
             <div className="flex items-center gap-6">
