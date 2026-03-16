@@ -19,7 +19,7 @@ const testimonios: Testimonio[] = [
     cargo: 'Gerente de Compras',
     empresa: 'Supermercados del Este',
     testimonio: 'Llevamos más de 10 años trabajando con Lunardi. La calidad de sus productos es inigualable y nuestros clientes siempre preguntan por sus panettones en época navideña.',
-    imagen: '/testimonios/maria-gonzalez.jpg',
+    imagen: '/img/testimonials/maria-gonzalez.webp',
   },
   {
     id: 2,
@@ -27,7 +27,7 @@ const testimonios: Testimonio[] = [
     cargo: 'Propietario',
     empresa: 'Minimarket Don Carlos',
     testimonio: 'Lo que más valoro es la puntualidad en las entregas. En este negocio, no puedes quedarte sin pan, y Lunardi nunca nos ha fallado.',
-    imagen: '/testimonios/carlos-benitez.jpg',
+    imagen: '/img/testimonials/carlos-benitez.jpg',
   },
   {
     id: 3,
@@ -35,7 +35,7 @@ const testimonios: Testimonio[] = [
     cargo: 'Directora de Operaciones',
     empresa: 'Cadena Hotelera Guaraní',
     testimonio: 'La variedad de productos integrales nos permite ofrecer opciones saludables a nuestros huéspedes. La pastafrola es un éxito en el desayuno buffet.',
-    imagen: '/testimonios/ana-fernandez.jpg',
+    imagen: '/img/testimonials/ana-fernandez.webp',
   },
   {
     id: 4,
@@ -43,7 +43,7 @@ const testimonios: Testimonio[] = [
     cargo: 'Chef Ejecutivo',
     empresa: 'Restaurant La Estancia',
     testimonio: 'Como chef, soy muy exigente con los proveedores. El pan de Lunardi tiene esa textura artesanal que es imposible de replicar industrialmente.',
-    imagen: '/testimonios/roberto-martinez.jpg',
+    imagen: '/img/testimonials/roberto-martinez.jpg',
   },
 ]
 
@@ -177,34 +177,35 @@ export default function Testimonios() {
         </div>
 
         {/* Stats o indicadores */}
-        <div
-          ref={useInView(0.3).ref}
-          className={`mt-20 grid grid-cols-2 md:grid-cols-4 gap-8 lg:gap-12 text-center
-            transition-all duration-700 delay-300 ease-out
-            ${cardsRef.isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
-        >
-          {[
-            { numero: '200+', label: 'Clientes Activos' },
-            { numero: '40', label: 'Años de Experiencia' },
-            { numero: '15k', label: 'Entregas Mensuales' },
-            { numero: '99%', label: 'Satisfacción' },
-          ].map((stat, index) => (
-            <div
-              key={stat.label}
-              className={`transition-all duration-700 ease-out
-                ${cardsRef.isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}
-              style={{
-                transitionDelay: cardsRef.isInView ? `${600 + index * 100}ms` : '0ms',
-              }}
-            >
-              <p className="text-3xl lg:text-4xl font-light text-red-900 mb-2">
-                {stat.numero}
-              </p>
-              <p className="text-xs tracking-[0.2em] uppercase text-red-900/50 font-light">
-                {stat.label}
-              </p>
-            </div>
-          ))}
+        <div className='w-full flex items-center justify-center'>
+          <div
+            ref={useInView(0.3).ref}
+            className={`mt-20 grid grid-cols-1 sm:grid-cols-3 gap-8 lg:gap-12 text-center
+              transition-all duration-700 delay-300 ease-out
+              ${cardsRef.isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
+          >
+            {[
+              { numero: '50+', label: 'Clientes Activos' },
+              { numero: '1000', label: 'Entregas Mensuales' },
+              { numero: '99%', label: 'Satisfacción' },
+            ].map((stat, index) => (
+              <div
+                key={stat.label}
+                className={`transition-all duration-700 ease-out
+                  ${cardsRef.isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}
+                style={{
+                  transitionDelay: cardsRef.isInView ? `${600 + index * 100}ms` : '0ms',
+                }}
+              >
+                <p className="text-3xl lg:text-4xl font-light text-red-900 mb-2">
+                  {stat.numero}
+                </p>
+                <p className="text-xs tracking-[0.2em] uppercase text-red-900/50 font-light">
+                  {stat.label}
+                </p>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>

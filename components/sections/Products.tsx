@@ -30,7 +30,7 @@ const productos: Producto[] = [
     nombre: 'Panettone Clásico',
     categoria: 'panettone',
     descripcion: 'El auténtico pan dulce italiano con frutas confitadas y pasas',
-    imagen: '/productos/panettone-clasico.jpg',
+    imagen: '/img/products/panettone.jpg',
     destacado: true,
   },
   {
@@ -38,7 +38,7 @@ const productos: Producto[] = [
     nombre: 'Chocottone',
     categoria: 'panettone',
     descripcion: 'Panettone con chips de chocolate belga',
-    imagen: '/productos/chocottone.jpg',
+    imagen: '/img/products/chocottone.jpg',
   },
   // PANES
   {
@@ -46,42 +46,42 @@ const productos: Producto[] = [
     nombre: 'Pan de Viena',
     categoria: 'panes',
     descripcion: 'Suave y esponjoso, perfecto para sándwiches',
-    imagen: '/productos/pan-viena.jpg',
+    imagen: '/img/products/pan-viena.jpg',
   },
   {
     id: 4,
     nombre: 'Pan de Miga Blanco',
     categoria: 'panes',
     descripcion: 'Clásico pan de miga para sándwiches tradicionales',
-    imagen: '/productos/pan-miga-blanco.jpg',
+    imagen: '/img/products/pan-miga-blanco.jpg',
   },
   {
     id: 5,
     nombre: 'Pan de Miga Integral',
     categoria: 'panes',
     descripcion: 'Pan de miga con harina integral, más fibra y sabor',
-    imagen: '/productos/pan-miga-integral.jpg',
+    imagen: '/img/products/pan-miga-integral.jpg',
   },
   {
     id: 6,
     nombre: 'Pan Chip',
     categoria: 'panes',
     descripcion: 'Suave y versátil, ideal para todo tipo de preparaciones',
-    imagen: '/productos/pan-chip.jpg',
+    imagen: '/img/products/pan-chip.jpg',
   },
   {
     id: 7,
     nombre: 'Pan de Semillas',
     categoria: 'panes',
     descripcion: 'Rico en fibra, con mix de semillas seleccionadas',
-    imagen: '/productos/pan-semillas.jpg',
+    imagen: '/img/products/pan-semillas.jpg',
   },
   {
     id: 8,
     nombre: 'Pan de Hamburguesa',
     categoria: 'panes',
     descripcion: 'Con semillas de sésamo, suave y resistente',
-    imagen: '/productos/pan-hamburguesa.jpg',
+    imagen: '/img/products/pan-hamburguesa.jpg',
   },
   // DULCES
   {
@@ -89,7 +89,7 @@ const productos: Producto[] = [
     nombre: 'Pastafrola',
     categoria: 'dulces',
     descripcion: 'Clásica tarta de membrillo con masa tierna',
-    imagen: '/productos/pastafrola.jpg',
+    imagen: '/img/products/pastafrola.png',
     destacado: true,
   },
   {
@@ -97,28 +97,28 @@ const productos: Producto[] = [
     nombre: 'Alfajores',
     categoria: 'dulces',
     descripcion: 'Rellenos de dulce de leche, bañados en chocolate',
-    imagen: '/productos/alfajores.jpg',
+    imagen: '/img/products/alfajores.jpg',
   },
   {
     id: 11,
     nombre: 'Alfajorcitos',
     categoria: 'dulces',
     descripcion: 'Versión mini de nuestros alfajores, ideales para eventos',
-    imagen: '/productos/alfajorcitos.jpg',
+    imagen: '/img/products/alfajorcitos.jpg',
   },
   {
     id: 12,
     nombre: 'Palmeritas',
     categoria: 'dulces',
     descripcion: 'Crujientes hojas de hojaldre caramelizado',
-    imagen: '/productos/palmeritas.jpg',
+    imagen: '/img/products/palmeritas.jpg',
   },
   {
     id: 13,
     nombre: 'Surtido de Galletas',
     categoria: 'dulces',
     descripcion: 'Variedad de galletas artesanales',
-    imagen: '/productos/surtido-galletas.jpg',
+    imagen: '/img/products/surtido-galletas.jpg',
   },
   // SECOS
   {
@@ -126,28 +126,28 @@ const productos: Producto[] = [
     nombre: 'Grisines Blancos',
     categoria: 'secos',
     descripcion: 'Palitos de pan crocantes, perfectos para acompañar',
-    imagen: '/productos/grisines-blancos.jpg',
+    imagen: '/img/products/grisines-blancos.jpg',
   },
   {
     id: 15,
     nombre: 'Grisines Integrales',
     categoria: 'secos',
     descripcion: 'Grisines con harina integral, más fibra y sabor rústico',
-    imagen: '/productos/grisines-integrales.jpg',
+    imagen: '/img/products/grisines-integrales.jpg',
   },
   {
     id: 16,
     nombre: 'Coquitos Blancos',
     categoria: 'secos',
     descripcion: 'Clásicos bocaditos de coco rallado y dulzura justa',
-    imagen: '/productos/coquitos-blancos.jpg',
+    imagen: '/img/products/coquitos-blancos.jpg',
   },
   {
     id: 17,
     nombre: 'Coquitos Integrales',
     categoria: 'secos',
     descripcion: 'Coquitos con harina integral, sabor más intenso',
-    imagen: '/productos/coquitos-integrales.jpg',
+    imagen: '/img/products/coquitos-integrales.jpg',
   },
   // OTROS
   {
@@ -155,14 +155,14 @@ const productos: Producto[] = [
     nombre: 'Prepizza',
     categoria: 'otros',
     descripcion: 'Base lista para tu pizza favorita',
-    imagen: '/productos/prepizza.jpg',
+    imagen: '/img/products/prepizza.jpg',
   },
   {
     id: 19,
     nombre: 'Galleta Molida',
     categoria: 'otros',
     descripcion: 'Para bases de tortas y postres',
-    imagen: '/productos/galleta-molida.jpg',
+    imagen: '/img/products/galleta-molida.jpg',
   },
 ]
 
