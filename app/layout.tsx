@@ -14,7 +14,7 @@ const crimson = Crimson_Pro({
 
 export const metadata: Metadata = {
   title: 'Lunardi',
-  description: 'Panadería artesanal B2B - Tradición italiana, excelencia garantizada',
+  description: 'Panadería Lunardi - El arte de hacer pan.',
 }
 
 export default function RootLayout({

@@ -82,11 +82,8 @@ export default function Hero() {
 
         {/* Subtítulo elegante */}
         <div className="text-center mb-12">
-          <p className="text-xl md:text-2xl lg:text-3xl text-amber-100/90 font-light italic tracking-wide">
-            Tradición italiana,
-          </p>
-          <p className="text-xl md:text-2xl lg:text-3xl text-amber-50 font-normal tracking-wide mt-1">
-            excelencia garantizada.
+          <p className="text-2xl md:text-3xl lg:text-4xl text-amber-100/90 font-light italic tracking-wide">
+            El Arte de Hacer Pan.
           </p>
         </div>
 

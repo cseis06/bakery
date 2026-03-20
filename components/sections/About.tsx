@@ -84,8 +84,8 @@ export default function SobreNosotros() {
                   : 'opacity-0 translate-y-8'
                 }`}
             >
-              <span className="block text-4xl lg:text-5xl font-light leading-none">40</span>
-              <span className="block text-sm tracking-[0.15em] uppercase mt-2 font-light">años de tradición</span>
+              <span className="block text-4xl lg:text-5xl font-light leading-none">6</span>
+              <span className="block text-sm tracking-[0.15em] uppercase mt-2 font-light">años creciendo.</span>
             </div>
             
             {/* Línea decorativa */}
@@ -111,9 +111,9 @@ export default function SobreNosotros() {
               <span className="text-red-900/60 text-xs tracking-[0.3em] uppercase font-light">
                 Sobre Nosotros
               </span>
-              <h2 className="text-4xl md:text-5xl lg:text-6xl font-light text-red-900 mt-4 leading-[1.1]">
-                El arte de la
-                <span className="block italic font-normal">panadería artesanal</span>
+              <h2 className="flex gap-3 text-4xl md:text-5xl lg:text-6xl font-light text-red-900 mt-4 leading-[1.1]">
+                El Arte de
+                <span className="block italic font-normal">Hacer Pan.</span>
               </h2>
             </div>
 
@@ -126,7 +126,7 @@ export default function SobreNosotros() {
                 }`}
             >
               <p className="text-lg text-red-950/70 leading-relaxed font-light">
-                Desde 1985, en el corazón de Ciudad del Este, horneamos con la misma 
+                En el corazón de Ciudad del Este, horneamos con la misma 
                 pasión del primer día. Nuestro obrador es el lugar donde la tradición 
                 italiana se encuentra con la dedicación paraguaya.
               </p>
@@ -176,10 +176,10 @@ export default function SobreNosotros() {
               style={{ transitionDelay: contentRef.isInView ? '850ms' : '0ms' }}
             >
               <p className="text-sm text-red-900/50 italic font-light">
-                "La calidad no es un acto, es un hábito que cultivamos cada día."
+                &quot;La calidad no es un acto, es un hábito que cultivamos cada día.&quot;
               </p>
               <p className="text-xs text-red-900/40 tracking-[0.2em] uppercase mt-2">
-                — Familia Lunardi
+                — Lunardi
               </p>
             </div>
           </div>

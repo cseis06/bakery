@@ -16,9 +16,9 @@ const testimonios: Testimonio[] = [
   {
     id: 1,
     nombre: 'María González',
-    cargo: 'Gerente de Compras',
-    empresa: 'Supermercados del Este',
-    testimonio: 'Llevamos más de 10 años trabajando con Lunardi. La calidad de sus productos es inigualable y nuestros clientes siempre preguntan por sus panettones en época navideña.',
+    cargo: 'Propietaria',
+    empresa: 'Despensa de Ciudad del Este',
+    testimonio: 'Llevamos trabajando con Lunardi desde sus inicios, la calidad de sus productos siempre fue inigualable y nuestros clientes siempre preguntan por sus panettones en época navideña.',
     imagen: '/img/testimonials/maria-gonzalez.webp',
   },
   {
@@ -42,7 +42,7 @@ const testimonios: Testimonio[] = [
     nombre: 'Roberto Martínez',
     cargo: 'Chef Ejecutivo',
     empresa: 'Restaurant La Estancia',
-    testimonio: 'Como chef, soy muy exigente con los proveedores. El pan de Lunardi tiene esa textura artesanal que es imposible de replicar industrialmente.',
+    testimonio: 'Como chef, soy muy exigente con los proveedores. El pan de Lunardi tiene esa textura que es imposible de replicar industrialmente.',
     imagen: '/img/testimonials/roberto-martinez.jpg',
   },
 ]
