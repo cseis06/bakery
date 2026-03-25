@@ -183,7 +183,7 @@ export default function FAQPage() {
       {/* Category Navigation */}
       <section className="border-b border-red-900/10 sticky top-0 bg-amber-50 z-10">
         <div className="max-w-6xl mx-auto px-6 lg:px-12">
-          <div className="flex overflow-x-auto gap-1 py-4 scrollbar-hide">
+          <div className="flex  justify-center overflow-x-auto gap-1 py-4 scrollbar-hide">
             {faqCategories.map((cat) => (
               <button
                 key={cat.category}
@@ -212,7 +212,7 @@ export default function FAQPage() {
               <h2 className="text-2xl font-light text-red-900 mb-8">
                 {category.category}
               </h2>
-              <div className="bg-white border border-red-900/10">
+              <div className="bg-white border border-red-900/10 px-6">
                 {category.questions.map((item, questionIndex) => (
                   <FAQItem
                     key={questionIndex}

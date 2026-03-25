@@ -190,7 +190,7 @@ export default function Footer() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                   </svg>
                   <div className="text-sm text-stone-300/70 font-light">
-                    <p>Av. Monseñor Rodríguez</p>
+                    <p>Av. República del Perú</p>
                     <p>Ciudad del Este, Paraguay</p>
                   </div>
                 </li>

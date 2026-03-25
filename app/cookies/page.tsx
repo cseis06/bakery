@@ -202,7 +202,7 @@ export default function CookiesPage() {
       <ul>
         <li><strong>Email:</strong> privacidad@lunardi.com.py</li>
         <li><strong>Teléfono:</strong> +595 614 123 456</li>
-        <li><strong>Dirección:</strong> Av. Monseñor Rodríguez, Ciudad del Este, Paraguay</li>
+        <li><strong>Dirección:</strong> Av. República del Perú, Ciudad del Este, Paraguay</li>
       </ul>
     </LegalPageLayout>
   )

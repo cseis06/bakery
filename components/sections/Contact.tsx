@@ -330,7 +330,7 @@ export default function Contacto() {
                   </div>
                   <div>
                     <p className="text-xs tracking-[0.15em] uppercase text-amber-400/70 mb-1">Dirección</p>
-                    <p className="text-amber-50/80 font-light">Av. Monseñor Rodríguez</p>
+                    <p className="text-amber-50/80 font-light">Av. República del Perú</p>
                     <p className="text-amber-50/80 font-light">Ciudad del Este, Paraguay</p>
                   </div>
                 </div>
