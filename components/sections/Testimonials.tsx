@@ -15,17 +15,17 @@ interface Testimonio {
 const testimonios: Testimonio[] = [
   {
     id: 1,
-    nombre: 'María González',
+    nombre: 'Anónimo',
     cargo: 'Propietaria',
-    empresa: 'Despensa de Ciudad del Este',
-    testimonio: 'Llevamos trabajando con Lunardi desde sus inicios, la calidad de sus productos siempre fue inigualable y nuestros clientes siempre preguntan por sus panettones en época navideña.',
+    empresa: 'Gerente en empresa anónima',
+    testimonio: 'Llevamos trabajando con Lunardi desde sus inicios, la calidad de sus productos siempre fue inigualable y en época navideña sus panettones no pueden faltar en nuestras canastas.',
     imagen: '/img/testimonials/maria-gonzalez.webp',
   },
   {
     id: 2,
     nombre: 'Carlos Benítez',
     cargo: 'Propietario',
-    empresa: 'Minimarket Don Carlos',
+    empresa: 'Minimarket',
     testimonio: 'Lo que más valoro es la puntualidad en las entregas. En este negocio, no puedes quedarte sin pan, y Lunardi nunca nos ha fallado.',
     imagen: '/img/testimonials/carlos-benitez.jpg',
   },
@@ -33,16 +33,16 @@ const testimonios: Testimonio[] = [
     id: 3,
     nombre: 'Ana Fernández',
     cargo: 'Directora de Operaciones',
-    empresa: 'Cadena Hotelera Guaraní',
-    testimonio: 'La variedad de productos integrales nos permite ofrecer opciones saludables a nuestros huéspedes. La pastafrola es un éxito en el desayuno buffet.',
+    empresa: 'Cadena Hotelera',
+    testimonio: 'Su variedad de productos nos permite ofrecer opciones de todo tipo a nuestros huéspedes. La pastafrola es un éxito en el desayuno buffet.',
     imagen: '/img/testimonials/ana-fernandez.webp',
   },
   {
     id: 4,
     nombre: 'Roberto Martínez',
     cargo: 'Chef Ejecutivo',
-    empresa: 'Restaurant La Estancia',
-    testimonio: 'Como chef, soy muy exigente con los proveedores. El pan de Lunardi tiene esa textura que es imposible de replicar industrialmente.',
+    empresa: 'Restaurant de hamburguesas',
+    testimonio: 'Como chef, soy muy exigente con los proveedores. El pan de Lunardi tiene un sabor que es imposible de replicar.',
     imagen: '/img/testimonials/roberto-martinez.jpg',
   },
 ]
@@ -174,38 +174,6 @@ export default function Testimonios() {
                 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-center" />
             </article>
           ))}
-        </div>
-
-        {/* Stats o indicadores */}
-        <div className='w-full flex items-center justify-center'>
-          <div
-            ref={useInView(0.3).ref}
-            className={`mt-20 grid grid-cols-1 sm:grid-cols-3 gap-8 lg:gap-12 text-center
-              transition-all duration-700 delay-300 ease-out
-              ${cardsRef.isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
-          >
-            {[
-              { numero: '50+', label: 'Clientes Activos' },
-              { numero: '1000', label: 'Entregas Mensuales' },
-              { numero: '99%', label: 'Satisfacción' },
-            ].map((stat, index) => (
-              <div
-                key={stat.label}
-                className={`transition-all duration-700 ease-out
-                  ${cardsRef.isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}
-                style={{
-                  transitionDelay: cardsRef.isInView ? `${600 + index * 100}ms` : '0ms',
-                }}
-              >
-                <p className="text-3xl lg:text-4xl font-light text-red-900 mb-2">
-                  {stat.numero}
-                </p>
-                <p className="text-xs tracking-[0.2em] uppercase text-red-900/50 font-light">
-                  {stat.label}
-                </p>
-              </div>
-            ))}
-          </div>
         </div>
       </div>
     </section>

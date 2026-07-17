@@ -100,7 +100,7 @@ export default function Contacto() {
               transition-all duration-700 delay-200 ease-out
               ${headerRef.isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
           >
-            ¿Interesado en ofrecer productos de panadería artesanal en tu negocio? 
+            ¿Interesado en ofrecer nuestros productos en tu negocio? 
             Completá el formulario y nos pondremos en contacto a la brevedad.
           </p>
         </div>

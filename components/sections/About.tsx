@@ -128,11 +128,11 @@ export default function SobreNosotros() {
               <p className="text-lg text-red-950/70 leading-relaxed font-light">
                 En el corazón de Ciudad del Este, horneamos con la misma 
                 pasión del primer día. Nuestro obrador es el lugar donde la tradición 
-                italiana se encuentra con la dedicación paraguaya.
+                se encuentra con la dedicación.
               </p>
               <p className="text-lg text-red-950/70 leading-relaxed font-light mt-4">
                 No somos solo proveedores; somos el socio que tu negocio necesita 
-                para ofrecer productos de panadería que tus clientes recordarán.
+                para ofrecer panificados que tus clientes recordarán.
               </p>
             </div>
 
